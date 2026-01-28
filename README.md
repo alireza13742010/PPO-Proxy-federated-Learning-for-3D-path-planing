@@ -16,3 +16,16 @@ Proximity Federated Learning (PFL) is another strategy to utilize PPO agents to 
   
 The proposed solution implements a standard PPO actor–critic loop inside a federated learning scaffold: each client runs its own 3D environment with different sets of obstacles, collects a fixed-size rollout buffer (1024), computes GAE advantages and returns, and performs multiple local PPO epochs (policy surrogate with clipping, value Mean Square Error (MSE), and entropy bonus) on GPU before the server aggregates models via AFL. 
 The actor is a CNN–GRU that maps the 6 D observation to a 26 way categorical policy and the critic is a CNN + multi head attention value head; during local updates the code optionally adds a PFL proximal term (\frac{\mu}{2})∥W- W_{global}∥2 to the minibatch loss so each client is penalized for drifting too far from the broadcast global parameters. Concretely, the server first computes and broadcasts a global state, clients collect rollouts and run local PPO update, then the server averages the updated client weights and rebroadcasts the aggregated state for the next round this cycle encourages shared knowledge while still allowing local exploration and adaptation.
+# Results 
+<img width="483" height="489" alt="image" src="https://github.com/user-attachments/assets/38232903-a5b3-4071-bdef-355b58d062ed" />
+<img width="970" height="567" alt="image" src="https://github.com/user-attachments/assets/09e45fe7-e0b4-4347-9e53-3fe5f39b7560" />
+<img width="483" height="489" alt="image" src="https://github.com/user-attachments/assets/2cd8bdc3-8195-4ea7-be18-675582d45d02" />
+<img width="1005" height="581" alt="image" src="https://github.com/user-attachments/assets/a4b5e374-da22-4267-895b-4dda25606ebe" />
+Table 6. The detailed achieved results using PPO + PFL model for 40 and 300 obstacles.
+Model Name	Success Rate (%)	Convergence Time (Seconds)	Path Length	Training Time
+(HH: MM: SS) 	Computational Complexity (GPU)
+Obstacles = 40
+PPO +PFL	100	0.047	28	00:45:17	0.5
+Obstacles = 300
+PPO +PFL	100		0.093	33	01:36:24	1.5
+
