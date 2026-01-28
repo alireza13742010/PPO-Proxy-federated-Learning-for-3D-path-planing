@@ -21,5 +21,7 @@ The actor is a CNN–GRU that maps the 6 D observation to a 26 way categorical p
 <img width="970" height="567" alt="image" src="https://github.com/user-attachments/assets/09e45fe7-e0b4-4347-9e53-3fe5f39b7560" />
 <img width="483" height="489" alt="image" src="https://github.com/user-attachments/assets/2cd8bdc3-8195-4ea7-be18-675582d45d02" />
 <img width="1005" height="581" alt="image" src="https://github.com/user-attachments/assets/a4b5e374-da22-4267-895b-4dda25606ebe" />
+
+
 # Comparison 
 <img width="720" height="262" alt="image" src="https://github.com/user-attachments/assets/fd67cf30-fd48-483b-9c5f-19991e5de648" />
