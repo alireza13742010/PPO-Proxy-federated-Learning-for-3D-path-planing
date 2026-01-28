@@ -21,30 +21,5 @@ The actor is a CNN–GRU that maps the 6 D observation to a 26 way categorical p
 <img width="970" height="567" alt="image" src="https://github.com/user-attachments/assets/09e45fe7-e0b4-4347-9e53-3fe5f39b7560" />
 <img width="483" height="489" alt="image" src="https://github.com/user-attachments/assets/2cd8bdc3-8195-4ea7-be18-675582d45d02" />
 <img width="1005" height="581" alt="image" src="https://github.com/user-attachments/assets/a4b5e374-da22-4267-895b-4dda25606ebe" />
-% Table 6. PPO + PFL Results for 40 Obstacles
-\begin{table}[h!]
-\centering
-\caption{Detailed results using PPO + PFL for 40 obstacles}
-\begin{tabular}{lccccc}
-\hline
-\textbf{Model Name} & \textbf{Success Rate (\%)} & \textbf{Convergence Time (s)} & \textbf{Path Length} & \textbf{Training Time (HH:MM:SS)} & \textbf{Computational Complexity (GPU)} \\
-\hline
-PPO + PFL & 100 & 0.047 & 28 & 00:45:17 & 0.5 \\
-\hline
-\end{tabular}
-\end{table}
 
-% Table 6. PPO + PFL Results for 300 Obstacles
-\begin{table}[h!]
-\centering
-\caption{Detailed results using PPO + PFL for 300 obstacles}
-\begin{tabular}{lccccc}
-\hline
-\textbf{Model Name} & \textbf{Success Rate (\%)} & \textbf{Convergence Time (s)} & \textbf{Path Length} & \textbf{Training Time (HH:MM:SS)} & \textbf{Computational Complexity (GPU)} \\
-\hline
-PPO + PFL & 100 & 0.093 & 33 & 01:36:24 & 1.5 \\
-\hline
-\end{tabular}
-\end{table}
-1.5
 
